@@ -1,0 +1,149 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+.signup-container {
+    min-height: 100vh;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+    ),
+    url("Images/netflix-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-box {
+    width: 450px;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    padding: 50px 55px;
+
+    border-radius: 4px;
+}
+
+.signup-box h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #b3b3b3;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    width: 100%;
+
+    padding: 16px;
+
+    margin-bottom: 16px;
+
+    background-color: #333;
+
+    border: 1px solid #777;
+
+    border-radius: 4px;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+form input::placeholder {
+    color: #b3b3b3;
+}
+
+form input:focus {
+    outline: none;
+    border-color: white;
+}
+
+form button {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 5px;
+
+    background-color: #e50914;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #f40612;
+}
+
+.signin-text {
+    color: #737373;
+
+    margin-top: 30px;
+
+    font-size: 16px;
+}
+
+.signin-text a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.signin-text a:hover {
+    text-decoration: underline;
+}
+
+.terms {
+    color: #737373;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-top: 20px;
+}
+
+.terms a {
+    color: #b3b3b3;
+
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+

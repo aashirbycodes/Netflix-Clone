@@ -1,0 +1,49 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Test - Netflix</title>
+    <link rel="stylesheet" href="/Pages Css/speed-test.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <a href="/index.html">
+        <img src="/Images/logo.png" alt="Netflix Logo">
+    </a>
+
+    <a href="/index.html" class="back-btn">Back to Home</a>
+</header>
+
+<main>
+
+    <h1>Speed Test</h1>
+
+    <div class="speed-box">
+        <h2>Check Your Internet Speed</h2>
+
+        <p>
+            Check your internet connection to understand whether it is
+            suitable for streaming movies and TV shows.
+        </p>
+
+        <button onclick="startTest()">Start Test</button>
+
+        <div id="result"></div>
+    </div>
+
+</main>
+
+<script>
+function startTest() {
+    document.getElementById("result").innerHTML =
+        "Your connection test has started.";
+}
+</script>
+
+</body>
+</html>
+

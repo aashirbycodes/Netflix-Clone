@@ -1,0 +1,59 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+header img {
+    width: 150px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    background: #e50914;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+main {
+    width: 80%;
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+
+.faq-box {
+    background: #222;
+    margin-bottom: 10px;
+    padding: 25px;
+}
+
+.faq-box h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.faq-box p {
+    color: #ccc;
+    line-height: 1.6;
+}

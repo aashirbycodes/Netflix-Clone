@@ -1,177 +1,619 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Aashir Netflix Website Clone</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
 </head>
+
 <body>
+
+    <!-- ================= HEADER ================= -->
+
     <div class="header">
+
         <nav>
-        <img src="Images/logo.png" alt="logo" class="logo">
-        <div>
-            
-                <button class="language-btn">English <img src="Images/down-icon.png"></button>
-                <button>Demo Sign In</button>
-        </div>
+
+            <img src="Images/logo.png" alt="Netflix Logo" class="logo">
+
+            <div class="nav-right">
+
+                <button class="language-btn">
+                    English
+                    <img src="Images/down-icon.png" alt="down">
+                </button>
+
+                <a href="signin.html">Demo Sign up</a>
+
+            </div>
+
         </nav>
+
+
         <div class="header-content">
+
             <h1>In the mood for great entertainment?</h1>
+
             <h3>Starts at Rs 250. Cancel anytime.</h3>
-            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <p>
+                Ready to watch? Enter your email to create or restart your membership.
+            </p>
+
             <form class="email-signup">
-                <input type="email" name="email" placeholder="Email Address" required>
-                <button type="submit">Get Started</button>
+
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <button type="submit">
+                    Get Started
+                </button>
+
             </form>
+
         </div>
+
     </div>
+
+
+    <!-- ================= VIDEO CAROUSEL ================= -->
+
+    <section class="video-section">
+
+        <div class="video-carousel">
+
+
+            <!-- ================= VIDEO 1 ================= -->
+
+            <div class="video-slide active">
+
+                <iframe
+                    src="https://www.youtube.com/embed/62bIsvRcPv0"
+                    title="Spider-Man Brand New Day Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+
+
+                <div class="video-overlay">
+
+                    <div class="video-info">
+
+                        <span>FEATURED</span>
+
+                        <h2>Spider-Man</h2>
+
+                        <p>
+                            Experience an amazing cinematic adventure
+                            with stunning visuals and entertainment.
+                        </p>
+
+                        <button
+                            class="watch-btn"
+                            type="button"
+                            onclick="watchVideo(0)">
+                            ▶ Watch Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= VIDEO 2 ================= -->
+
+            <div class="video-slide">
+
+                <iframe
+                    src="https://www.youtube.com/embed/PssKpzB0Ah0"
+                    title="Stranger Things 5 Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+
+
+                <div class="video-overlay">
+
+                    <div class="video-info">
+
+                        <span>FEATURED</span>
+
+                        <h2>Stranger Things 5</h2>
+
+                        <p>
+                            Discover a mysterious world filled with
+                            suspense, adventure and unforgettable moments.
+                        </p>
+
+                        <button
+                            class="watch-btn"
+                            type="button"
+                            onclick="watchVideo(1)">
+                            ▶ Watch Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= VIDEO 3 ================= -->
+
+            <div class="video-slide">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/X1aFkAkFASk?si=0ZLVrdamguHbgnki" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+                <div class="video-overlay">
+
+                    <div class="video-info">
+
+                        <span>TRENDING NOW</span>
+
+                        <h2>The Retaliator</h2>
+
+                        <p>
+                            Enjoy cinematic visuals and exciting
+                            entertainment on your screen.
+                        </p>
+
+                        <button
+                            class="watch-btn"
+                            type="button"
+                            onclick="watchVideo(2)">
+                            ▶ Watch Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PREVIOUS ================= -->
+
+            <button
+                class="carousel-btn prev"
+                type="button"
+                onclick="previousVideo()">
+
+                ❮
+
+            </button>
+
+
+            <!-- ================= NEXT ================= -->
+
+            <button
+                class="carousel-btn next"
+                type="button"
+                onclick="nextVideo()">
+
+                ❯
+
+            </button>
+
+
+            <!-- ================= DOTS ================= -->
+
+            <div class="carousel-dots">
+
+                <span
+                    class="dot active"
+                    onclick="showVideo(0)">
+                </span>
+
+                <span
+                    class="dot"
+                    onclick="showVideo(1)">
+                </span>
+
+                <span
+                    class="dot"
+                    onclick="showVideo(2)">
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
 
     <div class="features">
+
         <div class="row">
+
             <div class="text-col">
+
                 <h2>Enjoy on your TV.</h2>
-                <p>Watch on smart TVs, PlayStation, Xbox, Chromcast, Apple TV, Blu-ray
-                   players and more.</p>
+
+                <p>
+                    Watch on smart TVs, PlayStation, Xbox, Chromecast,
+                    Apple TV, Blu-ray players and more.
+                </p>
+
             </div>
+
             <div class="img-col">
-                <img src="Images/feature-1.png" alt="image-col">
+
+                <img src="Images/feature-1.png" alt="TV">
+
             </div>
+
         </div>
+
+
         <div class="row">
+
             <div class="img-col">
-                <img src="Images/feature-2.png" alt="image-col">
+
+                <img src="Images/feature-2.png" alt="Download">
+
             </div>
+
             <div class="text-col">
-                <h2>Download your shows to watch offline.</h2>
-                <p>Save your favourites easily and always have something to watch.</p>
+
+                <h2>
+                    Download your shows to watch offline.
+                </h2>
+
+                <p>
+                    Save your favourites easily and always have
+                    something to watch.
+                </p>
+
             </div>
+
         </div>
+
+
         <div class="row">
+
             <div class="text-col">
+
                 <h2>Watch everywhere</h2>
-                <p>Stream unlimited movies and TV shows on your phone, laptop and TV.</p>
+
+                <p>
+                    Stream unlimited movies and TV shows on your
+                    phone, laptop and TV.
+                </p>
+
             </div>
+
             <div class="img-col">
-                <img src="Images/feature-3.png" alt="image-col">
+
+                <img src="Images/feature-3.png" alt="Watch everywhere">
+
             </div>
+
         </div>
+
+
         <div class="row">
+
             <div class="img-col">
-                <img src="Images/feature-4.png" alt="image-col">
+
+                <img src="Images/feature-4.png" alt="Kids">
+
             </div>
+
             <div class="text-col">
-                <h2>Create profiles for children.</h2>
-                <p>Send children on adventures with their favourite characters in a space made just for them-free with your membership.</p>
+
+                <h2>
+                    Create profiles for children.
+                </h2>
+
+                <p>
+                    Send children on adventures with their favourite
+                    characters in a space made just for them.
+                </p>
+
             </div>
-            
+
         </div>
 
     </div>
 
+
+    <!-- ================= FAQ ================= -->
 
     <div class="faq">
+
         <h2>Frequently Asked Questions</h2>
+
         <ul class="accordion">
+
             <li>
+
                 <input type="radio" name="accordion" id="first">
-                <label for="first"> What is Netflix </label>
-                <div class="content">
-                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.<br><br>
 
-                You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
+                <label for="first">
+                    What is Netflix?
+                </label>
+
+                <div class="content">
+
+                    <p>
+                        Netflix is a streaming service that offers a wide
+                        variety of award-winning TV shows, movies, anime,
+                        documentaries, and more.
+                    </p>
+
                 </div>
+
             </li>
+
+
             <li>
+
                 <input type="radio" name="accordion" id="second">
-                <label for="second"> How much does Netflix cost? </label>
+
+                <label for="second">
+                    How much does Netflix cost?
+                </label>
+
                 <div class="content">
-                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from Rs 250 to Rs 1,100/month.</p>
+
+                    <p>
+                        Watch Netflix on your smartphone, tablet,
+                        Smart TV, laptop, or streaming device.
+                    </p>
+
                 </div>
+
             </li>
-             <li>
+
+
+            <li>
+
                 <input type="radio" name="accordion" id="third">
-                <label for="third"> Where can I watch? </label>
+
+                <label for="third">
+                    Where can I watch?
+                </label>
+
                 <div class="content">
-                <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
-            <br><br>
-                You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+
+                    <p>
+                        Watch anywhere, anytime on your internet-connected
+                        devices.
+                    </p>
 
                 </div>
+
             </li>
+
+
             <li>
+
                 <input type="radio" name="accordion" id="forth">
-                <label for="forth"> How do I cancel?</label>
+
+                <label for="forth">
+                    How do I cancel?
+                </label>
+
                 <div class="content">
-                <p>Netflix is flexible. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+
+                    <p>
+                        You can easily cancel your account online.
+                    </p>
 
                 </div>
-            </li>
-             <li>
-                <input type="radio" name="accordion" id="fifth">
-                <label for="fifth"> Where can I watch on Netflix? </label>
-                <div class="content">
-                <p>Netflix is flexible. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
 
-                </div>
             </li>
-             <li>
-                <input type="radio" name="accordion" id="six">
-                <label for="six"> What can I watch on Netflix? </label>
-                <div class="content">
-                <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want..</p>
 
-                </div>
-            </li>
+
             <li>
-                <input type="radio" name="accordion" id="seven">
-                <label for="seven"> Is Netflix good for kids? </label>
+
+                <input type="radio" name="accordion" id="fifth">
+
+                <label for="fifth">
+                    Where can I watch on Netflix?
+                </label>
+
                 <div class="content">
-                <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.
-                <br><br>
-                Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+
+                    <p>
+                        Netflix can be watched on phones, tablets,
+                        laptops, TVs and other supported devices.
+                    </p>
 
                 </div>
+
             </li>
+
+
+            <li>
+
+                <input type="radio" name="accordion" id="six">
+
+                <label for="six">
+                    What can I watch on Netflix?
+                </label>
+
+                <div class="content">
+
+                    <p>
+                        Netflix has movies, documentaries, TV shows,
+                        anime and Netflix Originals.
+                    </p>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <input type="radio" name="accordion" id="seven">
+
+                <label for="seven">
+                    Is Netflix good for kids?
+                </label>
+
+                <div class="content">
+
+                    <p>
+                        Netflix includes a Kids experience with
+                        family-friendly content.
+                    </p>
+
+                </div>
+
+            </li>
+
         </ul>
-         <small>Ready to watch? Enter your email to create or restart your membership.</small>
-    <form class="email-signup">
-        <input type="email" placeholder="Email Address" required>
-        <button type="submit">Get Started</button>
-    </form>
+
+
+        <small>
+            Ready to watch? Enter your email to create or restart
+            your membership.
+        </small>
+
+
+        <form class="email-signup">
+
+            <input
+                type="email"
+                placeholder="Email Address"
+                required>
+
+            <button type="submit">
+                Get Started
+            </button>
+
+        </form>
+
     </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
     <div class="footer">
-        <h2>Questions? call 000-000-000-000</h2>
+
+        <h2>
+            Questions? call 000-000-000-000
+        </h2>
+
 
         <div class="row">
+
             <div class="col">
-                <a href="#">FAQ</a>
-                <a href="#">Investor Relations</a>
-                <a href="#">Privacy</a>
-                <a href="#">Speed Test</a>
+
+                <a href="/pages Html/faq.html">FAQ</a>
+
+                <a href="/pages Html/investor-relations.html">
+                    Investor Relations
+                </a>
+
+                <a href="/pages Html/privacy.html">
+                    Privacy
+                </a>
+
+                <a href="/pages Html/speed-test.html">
+                    Speed Test
+                </a>
+
             </div>
+
+
             <div class="col">
-                 <a href="#">Help Center</a>
-                <a href="#">Jobs</a>
-                <a href="#">Cookies Preference</a>
-                <a href="#">Legal Notices</a>
+
+                <a href="/pages Html/help-center.html">
+                    Help Center
+                </a>
+
+                <a href="/pages Html/jobs.html">
+                    Jobs
+                </a>
+
+                <a href="/pages Html/cookies-preference.html">
+                    Cookies Preference
+                </a>
+
+                <a href="/pages Html/legal-notices.html">
+                    Legal Notices
+                </a>
+
             </div>
+
+
             <div class="col">
-                 <a href="#">Accounts</a>
-                <a href="#">Ways to watch</a>
-                <a href="#">Corporate Information</a>
-                <a href="#">Only on Netflix</a>
+
+                <a href="/pages Html/accounts.html">
+                    Accounts
+                </a>
+
+                <a href="/pages Html/way to watch.html">
+                    Ways to watch
+                </a>
+
+                <a href="/pages Html/coporate-operations.html">
+                    Corporate Information
+                </a>
+
+                <a href="/pages Html/only-on-netflix.html">
+                    Only on Netflix
+                </a>
+
             </div>
+
+
             <div class="col">
-                 <a href="#">Media Center</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Contact</a>
+
+                <a href="/pages Html/media-center.html">
+                    Media Center
+                </a>
+
+                <a href="/pages Html/term-of-use.html">
+                    Terms of Use
+                </a>
+
+                <a href="/pages Html/contact.html">
+                    Contact
+                </a>
+
             </div>
+
         </div>
-        <button class="language-btn">English <img src="Images/down-icon.png"></button>
-        <p class="copyright-txt">NetFlix Pakistan</p>
+
+
+        <button class="language-btn">
+
+            English
+
+            <img src="Images/down-icon.png" alt="down">
+
+        </button>
+
+
+        <p class="copyright-txt">
+            NetFlix Pakistan
+        </p>
+
     </div>
 
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
